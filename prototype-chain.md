@@ -4,7 +4,11 @@ http://leohetsch.com/include-vs-prepend-vs-extend/
 
 In javascript, the concept of a prototype chain shows how properties of objects resolve to values.
 
-In ruby, the lookup chain can be seen by `ClassName.ancestors`
+In ruby, this is true as well, but it is known as `ancestors`.
+
+We can see the lookup chain with `ClassName.ancestors`.
+
+In javascript, the prototype chain is simple, and so are our tools for modifying it.
 
 There is also more control given to the developer for controlling the ancestors. The three ways to modify the ancestors are:
 * Include
@@ -32,11 +36,15 @@ end
 
 Service.ancestors # [Service, Logs, Object, Kernel, BasicObject]
 
+Logs.ancestors # [Logs]
+
 s.run
 # [Logger]:Run starts
 # [Logger]:Run ends
 ```
 In this case, the ancestors has a new entry, `Logs` just after the `Service` class. Therefore, `include` is good to add funcitonality to classes that we might want to override ourselves. It also keeps it easy to adjust the behavior of our mixins, since we can adjust whatever methods we need while still keeping the rest of the functionality the same.
+
+Note that even though `Logs` is a part of the `Service` ancestors, it does not have the ancestors `Object`, `Kernel`, or `BasicObject`. So, ancestors are *not* a chain the same way that it is in javascript.
 
 Multiple includes push mixins further down the chain. So if two mixins have conflicting property names, the one included last will trump the others.
 
