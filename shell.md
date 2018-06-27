@@ -1,4 +1,4 @@
-# Rake tricks
+# Shell
 ## General
 
 * Shows all available rake commands: `rake -T`
