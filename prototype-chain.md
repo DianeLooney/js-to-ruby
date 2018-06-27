@@ -67,7 +67,7 @@ s.run
 # [Logger]:Run ends
 # [Logger]:Done calling run()
 ```
-In this case, we see that the prepended module can wrap funcitonality. This can be useful for debugging, for ensuring that a method only runs under certain conditions, for ensuring a method never runs, to clean arguments, to make sure any errors from a function get caught, etc.
+In this case, we see that the prepended module can wrap and override funcitonality. Notice that since the `log` method of `Logs` doesn't have a super call, the `log` method of `Service` will never be called. Ont he other hand, `run` has a `super` call, so it will execute the `run` method of Service. This can be useful for debugging, for ensuring that a method only runs under certain conditions, for ensuring a method never runs, to clean arguments, to make sure any errors from a function get caught, etc.
 
 ## Extend
 ```ruby
