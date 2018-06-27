@@ -29,6 +29,9 @@ class Service
   end
 end
 Service.ancestors # [Service, Logs, Object, Kernel, BasicObject]
+s.run
+# [Logger]:Run starts
+# [Logger]:Run ends
 ```
 In this case, the ancestors has a new entry, `Logs` just after the `Service` class. Therefore, `include` is good to add funcitonality to classes that we might want to override ourselves. It also keeps it easy to adjust the behavior of our mixins, since we can adjust whatever methods we need while still keeping the rest of the functionality the same.
 
