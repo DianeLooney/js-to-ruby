@@ -7,7 +7,9 @@
 
 ## Patterns
 Database binding is handled by schema.rb
+
 Modifying schema.rb is done with a db migration
+
 There is a tool to generate db migrations, and to apply them
 
 Rails implements MVC
@@ -44,5 +46,7 @@ Generally, if you just need to get a quick admin interface up, it will be good f
 * `vendor/assets` are for modifying how gems look
 
 *Routing*
+
 `config/routes.rb`
+
 There is a rake command to see everything getting routed by rails.
