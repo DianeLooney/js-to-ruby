@@ -1,9 +1,9 @@
 # Rails Overview
 ## Ruby Phrases
-Solidus - ecommerce gem
-Easypost - shipping gem, integrated into solidus
-Spree - ecommerce platform, the upstream of solidus, a lot of solidus code will be Spree ns
-JSONAPI::Resource - class that defines an API endpoint’s behavior, CRUD-ish
+* Solidus - ecommerce gem
+* Easypost - shipping gem, integrated into solidus
+* Spree - ecommerce platform, the upstream of solidus, a lot of solidus code will be Spree ns
+* JSONAPI::Resource - class that defines an API endpoint’s behavior, CRUD-ish
 
 ## Patterns
 Database binding is handled by schema.rb
