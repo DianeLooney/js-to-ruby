@@ -50,3 +50,12 @@ Generally, if you just need to get a quick admin interface up, it will be good f
 `config/routes.rb`
 
 There is a rake command to see everything getting routed by rails.
+
+## Debug
+* puma.rb
+```ruby
+if ENV.fetch('RAILS_ENV') == 'development'
+  puts "LOGGER: development => worker_timeout 3600"
+  worker_timeout 3600
+end
+```
