@@ -15,6 +15,7 @@
 * Loads from schema.rb: `rake db:reset`
 * Loads from migrations: `rake db:drop db:create db:migrate db:seed`
 * Undo last migration: `rake db:rollback`
+* Postgres doesn't accept connections after hard reset, `brew services stop postgresql`, check `/usr/local/var/postgres/postmaster.pid` and delete it if it exists, `brew services start postgresql`
 
 ## Heroku
 
