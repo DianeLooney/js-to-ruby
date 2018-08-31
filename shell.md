@@ -19,4 +19,4 @@
 
 ## Heroku
 
-* Open a rails console against production/staging: `heroku run rails -a ________`
+* Open a rails console against production/staging: `heroku run rails console -a ________`
